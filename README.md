@@ -114,3 +114,120 @@ It also helps identify whether low activity levels align with lower energy or pr
 📁 All charts are stored inside the charts/ folder
 
 The complete set of visualization files can be found in the charts directory of this repository.
+
+📌 Model, Prediction & Recommendation System (Today’s Work)
+
+This section contains all the work completed today, focused on building the machine learning model, creating a user-input prediction system, and generating personalized habit recommendations for students.
+
+✅ 1. Model Training (Decision Tree Regressor)
+
+Today, I implemented the machine learning part of the project.
+Three models were tested earlier (Linear Regression, KNN, and Decision Tree), and after evaluation, the Decision Tree Regressor performed the best based on:
+
+R² Score
+
+MAE (Mean Absolute Error)
+
+RMSE (Root Mean Squared Error)
+
+The Decision Tree model captures non-linear relationships between habits and productivity, making it the best fit for this dataset.
+
+✅ 2. Prediction Function
+
+A custom prediction function was created which takes the student’s daily lifestyle inputs and predicts their Productivity Score.
+
+The function:
+
+Accepts input values
+
+Creates a structured DataFrame
+
+Uses the trained model to generate a productivity score
+
+Displays the final output
+
+This allows the model to be used in real time by teachers or students.
+
+✅ 3. User Input System (Interactive)
+
+An interactive system was added where the user enters:
+
+Sleep hours
+
+Sleep quality
+
+Study hours
+
+Mood level
+
+Stress level
+
+Screen time
+
+Exercise
+
+Water intake
+
+Steps walked
+
+Social media usage
+
+Caffeine intake
+
+After entering values, the model immediately predicts the student’s productivity for the day.
+
+✅ 4. Personalized Habit Recommendation Engine
+
+A recommendation system was developed to help students improve their productivity based on their lifestyle data.
+
+The system analyzes:
+
+Sleep patterns
+
+Screen time
+
+Stress levels
+
+Exercise activity
+
+Water intake
+
+Study routine
+
+Steps walked
+
+Mood & energy levels
+
+Caffeine usage
+
+Based on these values and the predicted productivity score, it provides personalized suggestions, such as:
+
+Improve sleep to 7–8 hours
+
+Reduce screen time
+
+Practice Pomodoro study technique
+
+Increase hydration
+
+Add daily exercise
+
+Reduce caffeine intake
+
+Lower stress through short breaks or relaxation
+
+This makes the project practical and actionable.
+
+✅ 5. Final Output Example
+
+After entering daily lifestyle information, the user receives:
+
+📌 Predicted Productivity Score
+
+A numeric score based on habits.
+
+📌 Personalized Recommendations
+
+A list of clear suggestions to improve productivity.
+
+This turns the project from just a prediction model into a habit-improvement tool.
