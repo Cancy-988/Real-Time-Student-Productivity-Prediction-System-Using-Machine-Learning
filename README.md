@@ -231,3 +231,13 @@ A numeric score based on habits.
 A list of clear suggestions to improve productivity.
 
 This turns the project from just a prediction model into a habit-improvement tool.
+
+✔ “A Decision Tree Classifier is used to categorize students into Low, Medium, or High Productivity classes based on their daily lifestyle habits.”
+
+If you want a slightly more detailed version:
+
+✔ “The project uses a Decision Tree Classification model to predict the student’s productivity level (Low/Medium/High) from behavioral features such as sleep quality, stress, mood, energy, and screen time.”
+
+Or a very short version:
+
+✔ “Implemented a Decision Tree Classifier to classify students into productivity levels.”
