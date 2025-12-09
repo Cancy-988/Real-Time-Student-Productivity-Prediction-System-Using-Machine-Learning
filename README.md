@@ -241,3 +241,110 @@ If you want a slightly more detailed version:
 Or a very short version:
 
 ✔ “Implemented a Decision Tree Classifier to classify students into productivity levels.”
+
+🟦 Clustering Analysis
+
+To understand hidden patterns in student productivity behavior, two unsupervised machine learning algorithms were applied:
+
+K-Means Clustering
+
+Hierarchical Clustering (Agglomerative)
+
+These algorithms group students based on the similarity of their study habits, sleep duration, screen time, breakfast habits, and physical activity.
+
+🔹 1. K-Means Clustering
+
+K-Means is a partition-based clustering algorithm that divides the dataset into K clusters. Each cluster is formed around a centroid, which is the mean position of all points in that group.
+
+Why K-Means?
+
+Simple and fast
+
+Works well for medium-sized datasets
+
+Generates clear, separable clusters
+
+Features Used
+
+Study Hours
+
+Sleep Hours
+
+Screen Time
+
+Breakfast (Yes/No)
+
+Physical Activity (Yes/No)
+
+📉 Elbow Method (Choosing K)
+
+To determine the optimal number of clusters, the Elbow Method was used.
+This method plots WCSS (Within-Cluster Sum of Squares) against different values of K.
+
+✔ Interpretation of the Graph:
+
+WCSS drops sharply from K = 1 to K = 3
+
+After K = 3, the reduction becomes gradual
+
+This indicates the “elbow point” at K = 3
+
+🔍 Meaning:
+
+When K = 3, clusters are well-separated while avoiding overfitting.
+This suggests the dataset naturally forms three distinct groups of students based on productivity-related behaviors.
+
+🔹 2. Hierarchical Clustering
+
+Hierarchical clustering builds a tree-like structure called a dendrogram that shows how data points merge step by step.
+
+The Agglomerative approach was used, which starts by treating every data point as a single cluster and then merges the closest clusters until only one remains.
+
+Why Hierarchical Clustering?
+
+Does not require specifying K initially
+
+Provides a full visual hierarchy of clusters
+
+Helps understand relationships between groups
+
+🌳 Dendrogram (Cluster Visualization)
+
+The dendrogram displays vertical lines representing the distance at which clusters merge.
+
+✔ Interpretation of the Graph:
+
+Major merges happen at three main branches
+
+Cutting the dendrogram at an appropriate height (~12 units distance) results in 3 distinct clusters
+
+This perfectly aligns with the K-Means elbow result
+
+🔍 Meaning:
+
+Hierarchical Clustering also suggests the presence of three meaningful groups, confirming the K-Means findings.
+
+🟧 3. Comparison Between K-Means and Hierarchical Clustering
+Aspect	K-Means	Hierarchical
+Type	Partition-based	Tree-based
+Needs K initially?	Yes	No
+Visualization	Uses Elbow plot	Dendrogram
+Speed	Faster	Slower
+Best for	Larger datasets	Smaller datasets
+Output	Centroids + clusters	Full hierarchy of clusters
+✔ Result Consistency
+
+Both algorithms independently suggested 3 clusters, adding confidence to the stability and reliability of the grouping.
+
+🟩 4. Final Clustering Conclusion
+
+Both K-Means and Hierarchical Clustering consistently identified 3 meaningful clusters among students.
+These clusters likely represent different productivity lifestyles, such as:
+
+Cluster 0: High study hours, good sleep, low screen time
+
+Cluster 1: Moderate study/sleep habits
+
+Cluster 2: Low study, high screen time, low physical activity
+
+These patterns help identify different types of students and can be used later to provide tailored recommendations.
